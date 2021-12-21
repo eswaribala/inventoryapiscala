@@ -15,4 +15,6 @@ class ArtistSpec2AcceptanceSpecificationTest extends Specification {def is = s2"
   def age = (Year.now.getValue-artist.birthYear) should be_>(60)
   def awards = artist.noOfAwards should be_>(20)
 
+
+
 }
