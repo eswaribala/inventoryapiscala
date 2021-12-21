@@ -16,13 +16,23 @@ A BankAccount
 class AccountBDDWordSpecTest  extends AnyWordSpec with Matchers {
 
   "A Bank Account" when {
-    "created" should {
+    "Created" should {
       "should have initial Balance of $30" in{
-        assert(new BankAccount(30).accountBalance == 60)
+        assert(new BankAccount(30).accountBalance == 30)
+      }
+    }
+
+    "A Bank Account" when {
+      "Updated" should {
+        "should have updated balance of $70" in{
+         var bankAccount=new BankAccount(30)
+         bankAccount.addAmount(40)
+          assert(bankAccount.accountBalance == 70)
+        }
+
+        }
       }
 
-
-    }
   }
 
 }

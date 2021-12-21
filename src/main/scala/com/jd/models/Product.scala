@@ -9,7 +9,7 @@ case object Seasonal extends ProductType
 class Product{
   private var productId:Long=0
   private var productName:String=""
-  private var productType:ProductType=Regular
+  var productType:ProductType=Regular
 
   //setters
   def set_productId(value:Long): Unit ={
